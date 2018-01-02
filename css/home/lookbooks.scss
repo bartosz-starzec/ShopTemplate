@@ -1,0 +1,122 @@
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #eee;
+}
+
+.lookbooks {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-bottom: 50px;
+    @media(min-width: 1000px) {
+        flex-direction: row;
+    }
+    @mixin lookbok {
+        // border: 1px solid red;
+        width: 100vw;
+        height: 600px;
+        margin-bottom: 30px;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #f8f8f8;
+        display: flex;
+        flex-direction: column;
+        @media (min-width: 1000px) {
+            width: 30vw;
+            height: 320px;
+            flex-direction: row;
+        }
+        .photo {
+            text-align: center;
+            width: 210px;
+            height: 310px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 10px;
+            background-position: center bottom;
+            background-size: contain;
+            background-repeat: no-repeat;
+            overflow: hidden;
+        }
+        .lookbook-content {
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            @media(min-width: 1000px) {
+                width: 60%;
+            }
+            .lookbook-header {
+                margin-bottom: 15px;
+                p {
+                    &.lookbook-header {
+                        color: #575153;
+                        font-size: 2em;
+                        text-transform: uppercase;
+                        @media(min-width: 1000px) {
+                            font-size: 1.5em;
+                        }
+                        span {
+                            font-weight: bold;
+                            @media(min-width: 1000px) {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+            .lookbook-text {
+                p {
+                    &.lookbook-text {
+                        color: #727272;
+                        font-size: 0.8em;
+                    }
+                }
+            }
+            .viewNow-btn {
+                text-transform: uppercase;
+                width: 140px;
+                height: 40px;
+                margin-top: 15px;
+                margin-left: auto;
+                margin-right: auto;
+                background-color: transparent;
+                border: 1px solid #737373;
+                a {
+                    line-height: 40px;
+                    text-align: center;
+                    text-decoration-line: none;
+                    color: #737373;
+                }
+                &:hover {
+                    background-color: #00c8c8;
+                    border: none;
+                    cursor: pointer;
+                    a {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+    .first-lookbook {
+        @include lookbok;
+        .photo {
+            background-image: url("http://onlineshops.byethost15.com/img/lookbooks/lookbook1.png");
+        }
+    }
+    .second-lookbook {
+        @include lookbok;
+        .photo {
+            background-image: url("http://onlineshops.byethost15.com/img/lookbooks/lookbook2.png");
+        }
+    }
+    .third-lookbook {
+        @include lookbok;
+        .photo {
+            background-image: url("http://onlineshops.byethost15.com/img/lookbooks/lookbook3.png");
+        }
+    }
+}

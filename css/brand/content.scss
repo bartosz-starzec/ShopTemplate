@@ -1,0 +1,98 @@
+.brand--content {
+    width: 75vw;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    @media(min-width: 800px) {
+        flex-direction: row;
+    }
+    @mixin text {
+        text-align: justify;
+        font-size: 0.8em;
+        span {
+            display: block;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+            &:first-child {
+                font-size: 1.1em;
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
+        }
+    }
+    .brand--content__left-side {
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        @media(min-width: 800px) {
+            margin-right: 20px;
+        }
+        .brand--content__left-side--photo1 {
+            margin-bottom: 20px;
+            img {
+                width: 100%;
+            }
+        }
+        .brand--content__left-side--photo2 {
+            img {
+                width: 100%;
+            }
+        }
+        .brand--content__left-side--text {
+            margin-top: 10px;
+            p {
+                &.left-side--text {
+                    @include text;
+                }
+            }
+        }
+    }
+    .brand--content__right-side {
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        .brand--content__right-side--firstText {
+            margin-top: 50px;
+            margin-bottom: 20px;
+            p {
+                &.right-side--firstText {
+                    @include text;
+                }
+            }
+        }
+        .brand--content_right-side--secondText {
+            margin-bottom: 30px;
+            margin-top: 30px;
+            p {
+                &.right-side--secondText {
+                    @include text;
+                }
+            }
+        }
+        .brand--content__right-side--photo {
+            img {
+                width: 100%;
+            }
+        }
+        .brand--content__right-side--logos {
+            display: flex;
+            flex-direction: column;
+            img {
+                margin-left: auto;
+                margin-right: auto;
+                width: 70%;
+            }
+            @media(min-width: 800px) {
+                flex-direction: row;
+                justify-content: space-around;
+                img {
+                    width: 30%;
+                }
+            }
+        }
+    }
+}

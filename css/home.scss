@@ -1,0 +1,9 @@
+@import 'main';
+body {
+    @import 'top_bar';
+    @import 'sidebar';
+    @import 'home/header';
+    @import "home/products";
+    @import "home/lookbooks";
+    @import "footer";
+}
